@@ -1,0 +1,73 @@
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: auto;
+    padding: 10px;
+}
+
+.btn, .btn-outline-success {
+    border-color: #54A717 !important;
+    color: #54A717;
+}
+
+.btn:hover, .btn-outline-success:hover {
+    background-color: #54A717 !important;
+}
+
+#title {
+    font-family: 'CustomFont', sans-serif !important;
+}
+
+#limit_input input{
+    width: 50px !important;
+}
+
+#loading_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading_div img {
+    width: 70px;
+    height: auto;
+    top: 20%;
+    position: absolute;
+}
+
+#jack {
+    width: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../media/fonts/PixelSplitter-Bold.ttf'),
+}
+
+/* #title{
+    position: relative;
+    animation: title 3s ease infinite alternate-reverse;
+}
+
+@keyframes title {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+} */

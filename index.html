@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pt1_projecte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/code.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href=""
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="./media/Torrent_logo.png" class="img-fluid" alt="Torrent Logo" style="height: 40px;">
+                <span class="fs-4 ms-2" id="title">SEARCH API</span>
+            </a>
+        </header>
+    </div>
+
+    <div class="container">
+        <ul class="nav nav-pills">
+            <form class="d-flex mt-3 mt-lg-0" role="search" onsubmit="searchTorrents(); return false;">
+                <select class="form-select" aria-label="Default select example" id="website">
+                    <option selected disabled>--- Select a option ---</option>
+                    <option value="1337x">1337x</option>
+                    <option value="yts">Yts</option>
+                    <option value="piratebay">PirateBay</option>
+                </select>
+                &nbsp;
+                <input class="form-control me-2" type="search" placeholder="Name of the file..." aria-label="Search"
+                    id="search" required>
+                <div class="input-group" id="limit_input">
+                    <input type="number" class="form-control" aria-label="Amount" placeholder="files..." min="1">
+                    <span class="input-group-text">Limit</span>
+                </div>
+                &nbsp;
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </ul>
+    </div>
+
+    <div id="results" class="movie-grid" style="visibility: hidden;"></div>
+
+    <div id="loading_div" style="visibility: hidden;">
+        <img src="./media/loading-gif-loading.gif">
+    </div>
+
+    <img src="media/jackSparrow.png" alt="" id="jack">
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Ismael Delgado Sancho</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#twitter"></use>
+                    </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
